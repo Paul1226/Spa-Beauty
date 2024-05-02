@@ -1,4 +1,55 @@
+---
+interface NAV {
+    name: string;
+    href: string;
+}
+
+const NAV = [
+    {
+        name: "Home",
+        href: "/",
+    },
+    {
+        name: "About",
+        href: "/About",
+    },
+    {
+        name: "Services",
+        href: "/Services",
+    },
+    {
+        name: "Facilities",
+        href: "/Facilities",
+    },
+];
+---
+
 <header>
-    <a href=""></a>
-    <nav></nav>
+    <div class="">
+        <a href=""
+            >Glow
+            <span>Queen</span>
+        </a>
+    </div>
+    <nav>
+        <ul>
+            {
+                NAV.map(({ name, href }) => (
+                    <li>
+                        <a href={href}>{name}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </nav>
+    <aside>
+        <div class="">
+            <input type="text" />
+            <a href=""></a>
+        </div>
+        <div class="links">
+            <a href="#">Sign In</a>
+            <a href="#">Sign up</a>
+        </div>
+    </aside>
 </header>
