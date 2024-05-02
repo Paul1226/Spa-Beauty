@@ -2,70 +2,219 @@
 interface NAV {
     name: string;
     href: string;
+    d: string;
+    d2?: string;
 }
 
 const NAV = [
     {
         name: "Home",
         href: "/",
+        d: "M21.25 5.724V6.099L21.55 6.324C22.6179 7.1249 23.25 8.37996 23.25 9.724V19C23.25 21.3428 21.3428 23.25 19 23.25H17C16.8617 23.25 16.75 23.1383 16.75 23V14C16.75 13.0353 15.9667 12.25 15 12.25H9C8.0333 12.25 7.25 13.0353 7.25 14V23C7.25 23.1383 7.1383 23.25 7 23.25H5C2.65721 23.25 0.75 21.3428 0.75 19V9.724C0.75 8.30842 1.45003 6.99233 2.62254 6.20068C2.62258 6.20065 2.62262 6.20062 2.62266 6.2006L9.6224 1.47678C11.0679 0.50174 12.9321 0.50174 14.3776 1.47678L19.5805 4.98769L20.75 5.77689V4.366V2C20.75 1.86172 20.8617 1.75 21 1.75C21.1383 1.75 21.25 1.86172 21.25 2V5.724Z",
     },
     {
         name: "About",
         href: "/About",
+        d: "M4.98396 15.984C5.7727 15.1952 6.84204 14.7515 7.95748 14.75H16.0425C17.158 14.7515 18.2273 15.1952 19.016 15.984C19.8049 16.7728 20.2487 17.8423 20.25 18.9579V23.25H3.75V18.9575C3.75146 17.842 4.19521 16.7727 4.98396 15.984Z",
+        d2: "M17.25 6C17.25 8.8995 14.8995 11.25 12 11.25C9.10051 11.25 6.75 8.8995 6.75 6C6.75 3.10051 9.10051 0.75 12 0.75C14.8995 0.75 17.25 3.10051 17.25 6Z",
     },
     {
         name: "Services",
         href: "/Services",
+        d: "m15.47 13.879-.399-.635c-.766.48-1.885 1.006-3.07 1.006-1.185 0-2.305-.526-3.07-1.006a1.751 1.751 0 0 0-1.86 2.964c1.094.688 2.864 1.542 4.929 1.542 1.95 0 3.64-.763 4.743-1.427h.006l.183-.115a1.75 1.75 0 1 0-1.862-2.963l.4.634Zm0 0c-.816.512-2.079 1.121-3.469 1.121-1.39 0-2.654-.609-3.469-1.121l8.316.316a1 1 0 0 0-1.378-.316ZM22.5 9.75h.039c.395.02.711.35.711.749v3c0 .413-.337.75-.75.75h-1.25v7.605a1.396 1.396 0 0 1-1.399 1.399c-.27 0-.54-.079-.775-.235l-3.963-2.642-.189-.126H7A4.256 4.256 0 0 1 2.75 16v-1.75H1.5a.752.752 0 0 1-.75-.75v-3c0-.413.337-.75.75-.75h1.25V8A4.256 4.256 0 0 1 7 3.75h4.75V1a.25.25 0 1 1 .5 0v2.75H17A4.256 4.256 0 0 1 21.25 8v1.75h1.25ZM10.75 9.5a2.25 2.25 0 1 0-4.501.001A2.25 2.25 0 0 0 10.75 9.5Zm2.5 0a2.25 2.25 0 1 0 4.501-.001 2.25 2.25 0 0 0-4.501.001Z",
     },
     {
         name: "Facilities",
         href: "/Facilities",
+        d: "m17.937 10.862.276-.276v1.811c0 1.35-.687 2.636-1.532 3.724-.856 1.104-1.95 2.099-2.926 2.882a2.858 2.858 0 0 1-1.793.627c-.631 0-1.27-.206-1.793-.626l7.768-8.142Zm0 0c-.577-1.554-2.003-2.69-3.725-2.69-.837 0-1.609.207-2.25.6-.641-.392-1.413-.6-2.25-.6-2.253 0-4 1.944-4 4.226 0 1.349.686 2.635 1.531 3.724.857 1.103 1.95 2.098 2.926 2.882l7.768-8.142ZM2.623 6.2l7-4.723a4.23 4.23 0 0 1 4.755 0l5.203 3.51 1.169.79V1.999a.25.25 0 0 1 .25-.25.25.25 0 0 1 .25.25V6.109l.3.225a4.237 4.237 0 0 1 1.7 3.389v9.276a4.256 4.256 0 0 1-4.25 4.25H5a4.256 4.256 0 0 1-4.25-4.25V9.723c0-1.416.7-2.732 1.873-3.523Zm12.089 6.198c0 .266-.193.787-.766 1.532-.473.617-1.146 1.308-1.984 2.017-.838-.71-1.51-1.4-1.984-2.017-.573-.746-.766-1.267-.766-1.533 0-.52.337-.726.5-.726.227 0 .366.042.428.082.02.014.03.025.038.042.01.019.034.077.034.203a1.75 1.75 0 1 0 3.5 0c0-.127.024-.185.034-.204a.099.099 0 0 1 .038-.041c.062-.04.2-.082.428-.082.162 0 .5.205.5.727Z",
     },
 ];
 ---
 
-<header class="w-11/12 mx-auto py-4">
-    <div class="flex flex-col gap-2">
-        <div class="text-center">
-            <a class="text-3xl text-primary font-semibold" href="/"
+<header class="py-4">
+    <div
+        class="w-11/12 mx-auto contenido grid grid-cols-max justify-between items-center gap-y-4 overflow-visible"
+    >
+        <aside class="[grid-are:link] w-max">
+            <a
+                class="bg-primary text-white py-2 px-4 rounded-full inline-flex text-sm"
+                href="#">Sign Up</a
+            >
+        </aside>
+
+        <div
+            class="text-center [grid-area:logo] [opacity:var(--img1)] transition-opacity duration-300"
+        >
+            <a
+                class="text-2xl text-primary font-semibold transition-color duration-500"
+                href="/"
                 >Glow<span class="text-secondary">Queen</span>
             </a>
         </div>
-        <nav class="flex justify-center">
-            <ul class="w-full max-w-[400px] flex justify-between">
-                {
-                    NAV.map(({ name, href }) => (
-                        <li>
-                            <a href={href}>{name}</a>
-                        </li>
-                    ))
-                }
-                <li>
-                    <a class="flex items-center" href="#"
-                        >More<svg
-                            class="w-4"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentcolor"
-                            ><path
-                                d="M18.71 8.21a1 1 0 0 0-1.42 0l-4.58 4.58a1 1 0 0 1-1.42 0L6.71 8.21a1 1 0 0 0-1.42 0 1 1 0 0 0 0 1.41l4.59 4.59a3 3 0 0 0 4.24 0l4.59-4.59a1 1 0 0 0 0-1.41Z"
-                            ></path></svg
-                        ></a
+
+        <a
+            class="[grid-area:icon] [scale:var(--img1)] relative z-20 transition-all duration-500"
+            href="#nav"
+        >
+            <svg
+                class="w-5 fill-quaternary"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                ><rect y="3" width="24" height="3"></rect><rect
+                    y="8"
+                    width="24"
+                    height="3"></rect><rect y="18" width="24" height="3"
+                ></rect><rect y="13" width="24" height="3"></rect></svg
+            >
+        </a>
+
+        <!-- cross -->
+        <a
+            class="[grid-area:icon] [scale:var(--img2)] relative z-20 transition-all duration-500 w-max"
+            href="#"
+        >
+            <svg
+                class="w-5 fill-quaternary"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                fill="none"
+            >
+                <path
+                    d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256C511.847,114.678,397.322,0.153,256,0z M341.333,311.189c8.669,7.979,9.229,21.475,1.25,30.144c-7.979,8.669-21.475,9.229-30.144,1.25c-0.434-0.399-0.85-0.816-1.25-1.25 L256,286.165l-55.168,55.168c-8.475,8.185-21.98,7.95-30.165-0.525c-7.984-8.267-7.984-21.373,0-29.64L225.835,256l-55.168-55.168 c-8.185-8.475-7.95-21.98,0.525-30.165c8.267-7.984,21.373-7.984,29.64,0L256,225.835l55.189-55.168 c7.979-8.669,21.475-9.229,30.144-1.25c8.669,7.979,9.229,21.475,1.25,30.144c-0.399,0.434-0.816,0.85-1.25,1.25L286.165,256 L341.333,311.189z"
+                ></path>
+            </svg>
+        </a>
+
+        
+            <nav
+                class="min-h-[600px] w-4/6 max-w-[400px] absolute top-0 right-0 z-10 bg-secondary/50 backdrop-blur-md rounded-s-xl flex flex-col items-center justify-center gap-8 px-8 transition-all duration-300"
+                style=""
+                id="nav"
+            >
+                <p class="text-3xl text-primary font-semibold relative [opacity:var(--img2)] transition-opacity duration-1000">
+                    Glow<span
+                        class="text-secondary [-webkit-text-stroke:.5px_#264065]"
+                        style="text-shaodw: 1px 1px 1px #000;">Queen</span
                     >
-                </li>
-            </ul>
-        </nav>
-        <aside>
-            <!-- <div class="">
-                <input type="text" />
-                <a href=""></a>
-            </div> -->
-            <div class="flex items-center justify-center gap-4">
-                <a class="" href="#">Sign In</a>
-                <a class="bg-primary text-white py-2 px-4 rounded-lg" href="#"
-                    >Sign up</a
+                </p>
+                <ul class="flex flex-col gap-4 bg-red-40 w-full">
+                    {
+                        NAV.map(({ name, href, d, d2 }) => (
+                            <li>
+                                <a
+                                    class="flex items-center gap-4 bg-white/50 border-2 border-solid border-secondary/50 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white hover:scale-105 group"
+                                    href={href}
+                                >
+                                    <svg
+                                        class="w-5 fill-transparent stroke-current transition-all duration-300 group-hover:fill-current"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="none"
+                                        stroke-width="1.5"
+                                    >
+                                        <path d={d} />
+                                        {d2 && <path d={d2} />}
+                                    </svg>
+                                    {name}
+                                </a>
+                            </li>
+                        ))
+                    }
+                    <li>
+                        <a
+                            class="flex items-center gap-4 px-4 py-2 rounded-lg justify-between"
+                            href="#"
+                            >More<svg
+                                class="w-4"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentcolor"
+                                ><path
+                                    d="M18.71 8.21a1 1 0 0 0-1.42 0l-4.58 4.58a1 1 0 0 1-1.42 0L6.71 8.21a1 1 0 0 0-1.42 0 1 1 0 0 0 0 1.41l4.59 4.59a3 3 0 0 0 4.24 0l4.59-4.59a1 1 0 0 0 0-1.41Z"
+                                ></path></svg
+                            ></a
+                        >
+                    </li>
+                </ul>
+
+                <a
+                    class="bg-white py-2 px-4 rounded-full text-sm inline-flex hover:underline"
+                    href="#">Sign In</a
                 >
+            </nav>
+        <form class="flex items-center max-w-sm mx-auto [grid-area:search]">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+                <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                >
+                    <svg
+                        class="w-4 h-4 text-gray-600 dark:text-gray-400"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 18 20"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"
+                        ></path>
+                    </svg>
+                </div>
+                <input
+                    type="text"
+                    id="simple-search"
+                    class="bg-white border border-gray-300 border-solid text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search name..."
+                    required
+                />
             </div>
-        </aside>
+            <button
+                type="submit"
+                class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+                <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+                </svg>
+                <span class="sr-only">Search</span>
+            </button>
+        </form>
     </div>
 </header>
+
+<style>
+    header {
+        --img1: 1;
+        --img2: 0;
+        --clip: inset(0 0 0 100%);
+        --logo: block;
+        .contenido {
+            grid-template-areas: "link logo icon" "search search search";
+            nav {
+                clip-path: var(--clip);
+                transition: clip-path 500ms;
+            }
+        }
+        .contenido:has(#nav:target) {
+            --img1: 0;
+            --img2: 1;
+            --clip: inset(0 0 0 0);
+        }
+    }
+</style>
