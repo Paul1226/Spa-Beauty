@@ -24,32 +24,48 @@ const NAV = [
 ];
 ---
 
-<header>
-    <div class="">
-        <a href=""
-            >Glow
-            <span>Queen</span>
-        </a>
+<header class="w-11/12 mx-auto py-4">
+    <div class="flex flex-col gap-2">
+        <div class="text-center">
+            <a class="text-3xl text-primary font-semibold" href="/"
+                >Glow<span class="text-secondary">Queen</span>
+            </a>
+        </div>
+        <nav class="flex justify-center">
+            <ul class="w-full max-w-[400px] flex justify-between">
+                {
+                    NAV.map(({ name, href }) => (
+                        <li>
+                            <a href={href}>{name}</a>
+                        </li>
+                    ))
+                }
+                <li>
+                    <a class="flex items-center" href="#"
+                        >More<svg
+                            class="w-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentcolor"
+                            ><path
+                                d="M18.71 8.21a1 1 0 0 0-1.42 0l-4.58 4.58a1 1 0 0 1-1.42 0L6.71 8.21a1 1 0 0 0-1.42 0 1 1 0 0 0 0 1.41l4.59 4.59a3 3 0 0 0 4.24 0l4.59-4.59a1 1 0 0 0 0-1.41Z"
+                            ></path></svg
+                        ></a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <!-- <div class="">
+                <input type="text" />
+                <a href=""></a>
+            </div> -->
+            <div class="flex items-center justify-center gap-4">
+                <a class="" href="#">Sign In</a>
+                <a class="bg-primary text-white py-2 px-4 rounded-lg" href="#"
+                    >Sign up</a
+                >
+            </div>
+        </aside>
     </div>
-    <nav>
-        <ul>
-            {
-                NAV.map(({ name, href }) => (
-                    <li>
-                        <a href={href}>{name}</a>
-                    </li>
-                ))
-            }
-        </ul>
-    </nav>
-    <aside>
-        <div class="">
-            <input type="text" />
-            <a href=""></a>
-        </div>
-        <div class="links">
-            <a href="#">Sign In</a>
-            <a href="#">Sign up</a>
-        </div>
-    </aside>
 </header>
