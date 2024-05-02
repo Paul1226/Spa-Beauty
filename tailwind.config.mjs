@@ -12,6 +12,9 @@ export default {
 				tertiary: '#909090',
 				quaternary: '#070D15'
 
+			},
+			gridTemplateColumns:{
+				max:'min-content max-content min-content'
 			}
 		},
 	},
