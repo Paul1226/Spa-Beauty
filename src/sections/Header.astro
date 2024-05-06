@@ -29,19 +29,27 @@ const NAV = [
         d: "m17.937 10.862.276-.276v1.811c0 1.35-.687 2.636-1.532 3.724-.856 1.104-1.95 2.099-2.926 2.882a2.858 2.858 0 0 1-1.793.627c-.631 0-1.27-.206-1.793-.626l7.768-8.142Zm0 0c-.577-1.554-2.003-2.69-3.725-2.69-.837 0-1.609.207-2.25.6-.641-.392-1.413-.6-2.25-.6-2.253 0-4 1.944-4 4.226 0 1.349.686 2.635 1.531 3.724.857 1.103 1.95 2.098 2.926 2.882l7.768-8.142ZM2.623 6.2l7-4.723a4.23 4.23 0 0 1 4.755 0l5.203 3.51 1.169.79V1.999a.25.25 0 0 1 .25-.25.25.25 0 0 1 .25.25V6.109l.3.225a4.237 4.237 0 0 1 1.7 3.389v9.276a4.256 4.256 0 0 1-4.25 4.25H5a4.256 4.256 0 0 1-4.25-4.25V9.723c0-1.416.7-2.732 1.873-3.523Zm12.089 6.198c0 .266-.193.787-.766 1.532-.473.617-1.146 1.308-1.984 2.017-.838-.71-1.51-1.4-1.984-2.017-.573-.746-.766-1.267-.766-1.533 0-.52.337-.726.5-.726.227 0 .366.042.428.082.02.014.03.025.038.042.01.019.034.077.034.203a1.75 1.75 0 1 0 3.5 0c0-.127.024-.185.034-.204a.099.099 0 0 1 .038-.041c.062-.04.2-.082.428-.082.162 0 .5.205.5.727Z",
     },
 ];
+
+import Search from "../components/Search.astro";
 ---
 
 <header class="py-4">
     <div
-        class="w-11/12 mx-auto contenido grid grid-cols-max justify-between items-center gap-y-4 overflow-visible"
+        class="w-11/12 mx-auto contenido grid grid-cols-min justify-between items-center gap-y-4 overflow-visible"
     >
-        <aside class="[grid-are:link] w-max">
+        <!-- botones login -->
+        <aside class="[grid-area:link] w-max">
+            <a
+                class="text-primary py-2 px-4 rounded-full text-sm transition-colors duration-300 hidden hover:bg-white/80 hover:underline md:inline-flex"
+                href="#">Sign In</a
+            >
             <a
                 class="bg-primary text-white py-2 px-4 rounded-full inline-flex text-sm"
                 href="#">Sign Up</a
             >
         </aside>
 
+        <!-- logo -->
         <div
             class="text-center [grid-area:logo] [opacity:var(--img1)] transition-opacity duration-300"
         >
@@ -52,8 +60,30 @@ const NAV = [
             </a>
         </div>
 
+        <!-- shop y buscador -->
+        <div class="[grid-area:shop] flex gap-1 items-center">
+            <Search class="hidden lg:flex" />
+            <a
+                class="bas relative w-full block p-2 rounded-lg hover:bg-tertiary/10 transition-colors duration-300
+                before:content-[''] before:absolute before:w-2 before:h-2 before:top-0 before:right-0 before:bg-secondary before:rounded-full before:border-[1px] before:border-solid before:border-primary/50 
+                after:absolute after:top-[120%] after:left-1/2 after:-translate-x-1/2 after:bg-tertiary after:rounded-lg after:text-xs after:w-max after:py-1 after:px-2 after:text-white after:hidden hover:after:block after:z-10"
+                href="#"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 fill-quaternary"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    ><path
+                        d="M22.833 6.667h-4.5v-1.2c0-1.273-.632-2.494-1.757-3.394-1.125-.9-2.651-1.406-4.243-1.406-1.591 0-3.117.505-4.242 1.406-1.126.9-1.758 2.12-1.758 3.394v1.2h-4.5c-.398 0-.779.126-1.06.351-.282.225-.44.53-.44.849v13.2c0 .954.474 1.87 1.318 2.545.844.675 1.989 1.055 3.182 1.055h15c1.194 0 2.338-.38 3.182-1.055.844-.675 1.318-1.59 1.318-2.545v-13.2c0-.319-.158-.624-.439-.849a1.709 1.709 0 0 0-1.06-.351Zm-13.5-1.2c0-.637.316-1.247.879-1.697.563-.45 1.326-.703 2.121-.703.796 0 1.559.253 2.122.703.562.45.878 1.06.878 1.697v1.2h-6v-1.2Zm12 15.6c0 .318-.158.623-.439.848a1.709 1.709 0 0 1-1.06.352h-15c-.399 0-.78-.127-1.061-.352-.282-.225-.44-.53-.44-.848v-12h3v1.2c0 .318.158.623.44.848.281.225.662.352 1.06.352s.78-.127 1.061-.352c.281-.225.44-.53.44-.848v-1.2h6v1.2c0 .318.157.623.439.848.281.225.663.352 1.06.352.398 0 .78-.127 1.061-.352.281-.225.44-.53.44-.848v-1.2h3v12Z"
+                    ></path></svg
+                >
+            </a>
+        </div>
+
+        <!-- menus de nav -->
         <a
-            class="[grid-area:icon] [scale:var(--img1)] relative z-20 transition-all duration-500"
+            class="[grid-area:icon] [scale:var(--img1)] relative z-20 transition-all duration-500 lg:hidden"
             href="#nav"
         >
             <svg
@@ -71,7 +101,7 @@ const NAV = [
 
         <!-- cross -->
         <a
-            class="[grid-area:icon] [scale:var(--img2)] relative z-20 transition-all duration-500 w-max"
+            class="[grid-area:icon] [scale:var(--img2)] relative z-20 transition-all duration-500 w-max lg:hidden"
             href="#"
         >
             <svg
@@ -86,115 +116,69 @@ const NAV = [
             </svg>
         </a>
 
-        
-            <nav
-                class="min-h-[600px] w-4/6 max-w-[400px] absolute top-0 right-0 z-10 bg-secondary/50 backdrop-blur-md rounded-s-xl flex flex-col items-center justify-center gap-8 px-8 transition-all duration-300"
-                style=""
-                id="nav"
+        <!-- nav -->
+        <nav
+            class="min-h-[600px] w-4/6 max-w-[400px] absolute top-0 right-0 z-10 bg-secondary/50 backdrop-blur-md rounded-s-xl flex flex-col items-center justify-center gap-8 px-8 transition-all duration-300 [clip-path:var(--clip)]
+            lg:relative lg:w-full lg:h-full lg:min-w-full lg:max-w-full lg:min-h-full lg:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:flex-row lg:gap-0 lg:px-0 lg:[grid-area:nav]"
+            id="nav"
+        >
+            <p
+                class="text-3xl text-primary font-semibold relative [opacity:var(--img2)] transition-opacity duration-1000 lg:hidden"
             >
-                <p class="text-3xl text-primary font-semibold relative [opacity:var(--img2)] transition-opacity duration-1000">
-                    Glow<span
-                        class="text-secondary [-webkit-text-stroke:.5px_#264065]"
-                        style="text-shaodw: 1px 1px 1px #000;">Queen</span
-                    >
-                </p>
-                <ul class="flex flex-col gap-4 bg-red-40 w-full">
-                    {
-                        NAV.map(({ name, href, d, d2 }) => (
-                            <li>
-                                <a
-                                    class="flex items-center gap-4 bg-white/50 border-2 border-solid border-secondary/50 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white hover:scale-105 group"
-                                    href={href}
+                Glow<span
+                    class="text-secondary [-webkit-text-stroke:.5px_#264065]"
+                    style="text-shaodw: 1px 1px 1px #000;">Queen</span
+                >
+            </p>
+            <ul class="flex flex-col gap-4 bg-red-40 w-full lg:flex-row">
+                {
+                    NAV.map(({ name, href, d, d2 }) => (
+                        <li>
+                            <a
+                                class="flex items-center gap-4 bg-white/50 border-2 border-solid border-secondary/50 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white hover:scale-105 group lg:block lg:gap-0 lg:bg-transparent lg:border-none lg:py-0 lg:px-0  lg:rounded-none lg:hover:bg-transparent lg:hover:scale-100 lg:transition-colors lg:hover:text-secondary"
+                                href={href}
+                            >
+                                <svg
+                                    class="w-5 fill-transparent stroke-current transition-all duration-300 group-hover:fill-current lg:hidden"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="none"
+                                    stroke-width="1.5"
                                 >
-                                    <svg
-                                        class="w-5 fill-transparent stroke-current transition-all duration-300 group-hover:fill-current"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="none"
-                                        stroke-width="1.5"
-                                    >
-                                        <path d={d} />
-                                        {d2 && <path d={d2} />}
-                                    </svg>
-                                    {name}
-                                </a>
-                            </li>
-                        ))
-                    }
-                    <li>
-                        <a
-                            class="flex items-center gap-4 px-4 py-2 rounded-lg justify-between"
-                            href="#"
-                            >More<svg
-                                class="w-4"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="currentcolor"
-                                ><path
-                                    d="M18.71 8.21a1 1 0 0 0-1.42 0l-4.58 4.58a1 1 0 0 1-1.42 0L6.71 8.21a1 1 0 0 0-1.42 0 1 1 0 0 0 0 1.41l4.59 4.59a3 3 0 0 0 4.24 0l4.59-4.59a1 1 0 0 0 0-1.41Z"
-                                ></path></svg
-                            ></a
-                        >
-                    </li>
-                </ul>
-
-                <a
-                    class="bg-white py-2 px-4 rounded-full text-sm inline-flex hover:underline"
-                    href="#">Sign In</a
-                >
-            </nav>
-        <form class="flex items-center max-w-sm mx-auto [grid-area:search]">
-            <label for="simple-search" class="sr-only">Search</label>
-            <div class="relative">
-                <div
-                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-                >
-                    <svg
-                        class="w-4 h-4 text-gray-600 dark:text-gray-400"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 18 20"
+                                    <path d={d} />
+                                    {d2 && <path d={d2} />}
+                                </svg>
+                                {name}
+                            </a>
+                        </li>
+                    ))
+                }
+                <li>
+                    <a
+                        class="flex items-center gap-4 px-4 py-2 rounded-lg justify-between lg:px-0 lg:py-0 lg:gap-2"
+                        href="#"
+                        >More<svg
+                            class="w-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentcolor"
+                            ><path
+                                d="M18.71 8.21a1 1 0 0 0-1.42 0l-4.58 4.58a1 1 0 0 1-1.42 0L6.71 8.21a1 1 0 0 0-1.42 0 1 1 0 0 0 0 1.41l4.59 4.59a3 3 0 0 0 4.24 0l4.59-4.59a1 1 0 0 0 0-1.41Z"
+                            ></path></svg
+                        ></a
                     >
-                        <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"
-                        ></path>
-                    </svg>
-                </div>
-                <input
-                    type="text"
-                    id="simple-search"
-                    class="bg-white border border-gray-300 border-solid text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Search name..."
-                    required
-                />
-            </div>
-            <button
-                type="submit"
-                class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                </li>
+            </ul>
+
+            <a
+                class="text-primary py-2 px-4 rounded-full text-sm transition-colors duration-300 inline-flex hover:bg-white/50 hover:underline md:hidden"
+                href="#">Sign In</a
             >
-                <svg
-                    class="w-4 h-4"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 20 20"
-                >
-                    <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
-                </svg>
-                <span class="sr-only">Search</span>
-            </button>
-        </form>
+        </nav>
+
+        <!-- buscador en mobible -->
+       <Search class="flex items-center max-w-sm mx-auto [grid-area:search] lg:hidden"/> 
     </div>
 </header>
 
@@ -205,16 +189,53 @@ const NAV = [
         --clip: inset(0 0 0 100%);
         --logo: block;
         .contenido {
-            grid-template-areas: "link logo icon" "search search search";
+            grid-template-areas:
+                "link logo shop icon"
+                "search search search search"
+            ;
+            
+            .bas::before {
+                animation: notificacion 1s linear infinite alternate-reverse;
+            }
+            .bas::after {
+                content: "Shop";
+            }
             nav {
-                clip-path: var(--clip);
                 transition: clip-path 500ms;
+                grid-area: nav;
             }
         }
         .contenido:has(#nav:target) {
             --img1: 0;
             --img2: 1;
             --clip: inset(0 0 0 0);
+        }
+    }
+
+    @keyframes notificacion {
+        0% {
+            opacity: 0;
+            scale: 0.7;
+        }
+        100% {
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        header{
+
+            .contenido {
+                grid-template-areas:
+                "logo nav shop link"
+                ;
+                /* background-color: yellow; */
+                
+                nav {
+                    clip-path: none;
+                }
+            }
         }
     }
 </style>
