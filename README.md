@@ -1,4 +1,16 @@
 # Spa Beauty
 ## Se irá añadiendo las modificaciones que van quedando pendientes dentro del repositorio
+- MOBILE
 ![alt text](image.png)
+
+- TABLET
+![alt text](image-1.png)
+
+- TABLET HORIZONTAL
+![alt text](image-2.png)
+
+-DESKTOP
+![alt text](image-3.png)
+
 - [_] En el Header tratar de poner sobra en el contenedor del nav.
+- [_] El header en el modo lg se muestra solo el svg de buscar y se requiere de js para aparecer la barra del buscador.
