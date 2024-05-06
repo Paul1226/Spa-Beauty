@@ -1,7 +1,8 @@
 # Spa Beauty
 ## Se irá añadiendo las modificaciones que van quedando pendientes dentro del repositorio
+
 - MOBILE
-![alt text](image.png)
+![alt text](image-4.png)
 
 - TABLET
 ![alt text](image-1.png)
@@ -9,7 +10,7 @@
 - TABLET HORIZONTAL
 ![alt text](image-2.png)
 
--DESKTOP
+- DESKTOP
 ![alt text](image-3.png)
 
 - [_] En el Header tratar de poner sobra en el contenedor del nav.
