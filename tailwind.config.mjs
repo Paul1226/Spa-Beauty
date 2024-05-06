@@ -5,7 +5,7 @@ export default {
 		extend: {
 			fontFamily:{
 				'poppins':['Poppins', 'sans-serif'],
-			},
+			},	
 			colors:{
 				primary: '#264065',
 				secondary: '#A9D6CB',
@@ -14,7 +14,7 @@ export default {
 
 			},
 			gridTemplateColumns:{
-				max:'min-content max-content min-content'
+				min:'min-content min-content min-content min-content'
 			}
 		},
 	},
