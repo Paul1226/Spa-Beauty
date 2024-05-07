@@ -16,5 +16,5 @@
 - [_] En el Header tratar de poner sobra en el contenedor del nav.
 - [_] El header en el modo lg se muestra solo el svg de buscar y se requiere de js para aparecer la barra del buscador.
 
--[_] Aún esta de terminar el responsive de la página, de lg hasta xl.
--[_] Las imágenes del hero aun no estan comprimidas.
+- [_] Aún esta de terminar el responsive de la página, de lg hasta xl.
+- [_] Las imágenes del hero aun no estan comprimidas.
