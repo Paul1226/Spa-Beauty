@@ -1,0 +1,12 @@
+---
+interface Props {
+    text: string
+    author: string
+}
+const { text, author } = Astro.props
+---
+<article class="p-6 rounded-xl bg-white/70 backdrop-blur-sm flex flex-col gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="21" fill="none"><path fill="#264065" d="M10.105 21H0L9.51 0h6.44l-5.845 21Zm16.05 0H16.049L25.56 0H32l-5.845 21Z"/></svg>
+    <p class="text-quaternary">{text}</p>
+    <span class="text-primary text-lg font-bold">{author}</span>
+</article>

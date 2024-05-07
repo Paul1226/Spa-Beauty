@@ -1,11 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../sections/Header.astro';
+import Hero from '../sections/Hero.astro';
+import HeroBg from '../components/HeroBg.astro';
+import Experiences from '../components/Experiences.astro';
 ---
 
 <Layout title="Spa Beauty | Home">
 	<Header/>
-	<main>
-		
+	<main class="grid grid-cols-1 gap-8">
+		<header class="grid md:grid-cols-2 md:items-center">
+			<Hero/>
+			<Experiences/>
+		</header>
+		<HeroBg/>
 	</main>
 </Layout>

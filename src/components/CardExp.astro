@@ -1,0 +1,14 @@
+---
+interface Props {
+    titleExp: string
+    textExp: string
+}
+const { titleExp, textExp } = Astro.props
+---
+<article class="flex flex-col gap-2 w-[120px] items-center rounded-md p-4 bg-white/50 backdrop-blur-sm shadow-sm">
+    <span class="bg-secondary rounded-full p-1 w-max">
+        <slot name="icon"/>
+    </span>
+    <h4 class="text-primary text-2xl font-semibold">{titleExp}</h4>
+    <p class="text-tertiary w-min text-center text-wrap">{textExp}</p>
+</article>
