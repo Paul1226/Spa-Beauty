@@ -8,11 +8,33 @@ import Experiences from '../components/Experiences.astro';
 
 <Layout title="Spa Beauty | Home">
 	<Header/>
-	<main class="grid grid-cols-1 gap-8">
-		<header class="grid md:grid-cols-2 md:items-center">
+	<main class="">
+		<header class="grid md:grid-cols-2 md:items-center gap-6 xl:grid-cols-5 xl:gap-y-0">
 			<Hero/>
 			<Experiences/>
+			<HeroBg/>
 		</header>
-		<HeroBg/>
 	</main>
 </Layout>
+
+<style>
+	header{
+		grid-template-areas: "hero" "deco" "test";
+	}
+	@media (min-width: 768px) {
+		header{
+			grid-template-areas: "hero deco" "test test";
+		}
+	}
+	@media (min-width: 1024px) {
+		header{
+			grid-template-areas: "hero test" "deco deco";
+		}
+	}
+	@media (min-width: 1280px) {
+		header{
+			grid-template-areas: "hero hero hero test test" "deco deco deco deco deco";
+			
+		}
+	}
+</style>

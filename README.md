@@ -18,3 +18,5 @@
 
 - [_] Aún esta de terminar el responsive de la página, de lg hasta xl.
 - [_] Las imágenes del hero aun no estan comprimidas.
+- [_] El header tiene que tener una animacion que detecte el scroll para que sea visible al navegar en la página.
+- [_] Las cards de experiencias necesitan posicionarse en la parte inferior del contenedor.
